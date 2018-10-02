@@ -1,13 +1,15 @@
+import React from 'react'
+import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import { render } from 'react-dom'
 import reducers from './reducers/index'
-import * as CounterAction from './actions/counter'
-console.log('---> redux start')
+import Index from './components/index'
 
-// --------------------------------------------------
-//   store
 const store = createStore(reducers)
-const unsubscribe = store.subscribe(() => console.log(store.getState().counter))
-store.dispatch(CounterAction.increment(1))
-store.dispatch(CounterAction.decrement(1))
 
-unsubscribe()
+render(
+  <Provider store={store}>
+    <Index />
+  </Provider>,
+  document.getElementById('redux-app')
+)
