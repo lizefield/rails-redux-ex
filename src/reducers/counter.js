@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions/counter'
+import { INCREMENT, DECREMENT } from '../constants/type'
 const INITIAL_STATE = { count: 0 }
 
 export default (state=INITIAL_STATE, action) => {

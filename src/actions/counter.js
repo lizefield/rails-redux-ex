@@ -1,5 +1,4 @@
-export const INCREMENT = 'INCREMENT'
-export const DECREMENT = 'DECREMENT'
+import { INCREMENT, DECREMENT } from '../constants/type'
 
 export function increment(num) {
   return {
@@ -10,7 +9,7 @@ export function increment(num) {
 
 export function decrement(num) {
   return {
-    type: INCREMENT,
+    type: DECREMENT,
     num
   }
 }
