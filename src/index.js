@@ -6,6 +6,8 @@ console.log('---> redux start')
 // --------------------------------------------------
 //   store
 const store = createStore(reducers)
-store.subscribe(() => console.log(store.getState()))
+const unsubscribe = store.subscribe(() => console.log(store.getState().counter))
 store.dispatch(CounterAction.increment(1))
 store.dispatch(CounterAction.decrement(1))
+
+unsubscribe()
