@@ -3,7 +3,8 @@ export const INIT_STATE_COUNTER = {
 }
 
 export const INIT_STATE_ACCOUNT = {
-  id: '',
+  email: '',
   password: '',
+  token: null,
   status: false
 }

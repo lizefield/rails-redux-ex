@@ -11,7 +11,7 @@ export default class Login extends React.Component {
     return (
       <div>
         <h1>Login</h1>
-        <input name='id' type='text' value={account.id} onChange={(e) => handleChange({ [e.target.name]: e.target.value })}></input>
+        <input name='email' type='text' value={account.email} onChange={(e) => handleChange({ [e.target.name]: e.target.value })}></input>
         <input name='password' type='text' value={account.password} onChange={(e) => handleChange({ [e.target.name]: e.target.value })}></input>
         <button onClick={() => login(account)}>LOGIN</button>
         {this.loginStatus(account.status)}

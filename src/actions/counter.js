@@ -3,13 +3,13 @@ import { INCREMENT, DECREMENT } from '../constants/type'
 export function increment(num) {
   return {
     type: INCREMENT,
-    num
+    payload: { num }
   }
 }
 
 export function decrement(num) {
   return {
     type: DECREMENT,
-    num
+    payload: { num }
   }
 }

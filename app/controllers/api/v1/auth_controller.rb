@@ -4,7 +4,6 @@ module Api
       include ActionController::HttpAuthentication::Token::ControllerMethods
       include TokenManager
 
-      USER_ID = 99
       USER_EMAIL = 'test@test.com'
       USER_PASSWORD = 'password'
 
@@ -32,7 +31,7 @@ module Api
 
           render json: { status: 'success', code: 200, token: token }
         else
-          render json: { status: 'error', code: 401, message: 'invalid id or password'}
+          render json: { status: 'error', code: 401, message: 'invalid email or password'}
         end
       end
 
