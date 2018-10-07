@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Counter extends React.Component {
   constructor(props) {
@@ -23,10 +24,13 @@ export default class Counter extends React.Component {
     return (
       <div>
         <h1>Counter</h1>
+        <hr />
         <h2>{counter.count}</h2>
         {this.checkCount(counter.count)}
         <button onClick={(e) => increment(e)}>INCREMENT</button>
         <button onClick={(e) => decrement(e)}>DECREMENT</button>
+        <br /><br />
+        <Link to="/history">User History</Link>
       </div>
     )
   }
