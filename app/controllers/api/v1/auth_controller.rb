@@ -38,6 +38,7 @@ module Api
       def logout
         # check authorized token
         authenticate_or_request_with_http_token do |token, options|
+          logger.debug token
           # decode
           decoded = jwt_decode(token)
           logger.debug $login_user_ids.inspect

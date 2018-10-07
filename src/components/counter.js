@@ -6,6 +6,18 @@ export default class Counter extends React.Component {
     console.dir(props)
   }
 
+  componentWillMount() {
+    if (!this.props.account.token) {
+      this.props.history.push('/')
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.account.token) {
+      nextProps.history.push('/')
+    }
+  }
+
   render() {
     const { counter, increment, decrement } = this.props
     return (
@@ -20,6 +32,6 @@ export default class Counter extends React.Component {
   }
 
   checkCount(count) {
-    return (count > 10) ? <p style={{color: 'red'}}>Over 10</p> : <p style={{color: 'blue'}}>Under 10</p>
+    return (count >= 10) ? <p style={{color: 'red'}}>Over 10</p> : <p style={{color: 'blue'}}>Under 10</p>
   }
 }

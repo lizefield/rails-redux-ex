@@ -6,5 +6,5 @@ export const INIT_STATE_ACCOUNT = {
   email: '',
   password: '',
   token: null,
-  status: false
+  error: null
 }

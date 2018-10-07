@@ -1,4 +1,4 @@
-import { HANDLE_CHANGE, LOGIN } from '../constants/type'
+import { HANDLE_CHANGE, LOGIN, LOGOUT } from '../constants/type'
 import { INIT_STATE_ACCOUNT } from '../constants/init'
 
 export default (state=INIT_STATE_ACCOUNT, action) => {
@@ -11,7 +11,12 @@ export default (state=INIT_STATE_ACCOUNT, action) => {
     case LOGIN:
       return {
         ...state,
-        status: action.payload.status
+        ...action.payload
+      }
+    case LOGOUT:
+      return {
+        ...state,
+        ...action.payload
       }
     default:
       return state
