@@ -5,6 +5,40 @@
 * Redux(React)の構成は出来るだけ公式(react,flux,redux)に沿った形で作成し、分割出来るところまで分割
 * 認証トークンとしてJWTをサンプル実装
 
+## Docker
+
+git cloneしたディレクトリへ移動後に各コマンド実行  
+
+### 起動
+
+imageが無い場合はbuildも行われる  
+
+```
+docker-compose up -d
+```
+
+### コンテナ起動状態確認
+
+```
+docker-compose ps
+```
+
+### ログ確認
+
+tail不要の場合は```-f```オプション省略
+
+```
+docker-compose tail -f
+```
+
+### コンテナ内コマンド実行
+
+例えばrailsのログ確認の場合
+
+```
+docker exec -it rails-redux-ex tail -f log/development.log
+```
+
 ## Versions
 
 | package | version | url |
@@ -39,40 +73,6 @@
 | @babel/core | 7.1.2 | https://babeljs.io/docs/en/next/babel-core.html |
 | @babel/plugin-proposal-object-rest-spread | 7.0.0 | https://babeljs.io/docs/en/next/babel-plugin-proposal-object-rest-spread.html |
 | @babel/preset-react | 7.0.0 | https://babeljs.io/docs/en/babel-preset-react |
-
-## Docker
-
-git cloneしたディレクトリへ移動後に各コマンド実行  
-
-### 起動
-
-imageが無い場合はbuildも行われる  
-
-```
-docker-compose up -d
-```
-
-### コンテナ起動状態確認
-
-```
-docker-compose ps
-```
-
-### ログ確認
-
-tail不要の場合は```-f```オプション省略
-
-```
-docker-compose tail -f
-```
-
-### コンテナ内コマンド実行
-
-例えばrailsのログ確認の場合
-
-```
-docker exec -it rails-redux-ex tail -f log/development.log
-```
 
 ## 補足
 
