@@ -39,6 +39,14 @@ docker-compose tail -f
 docker exec -it rails-redux-ex tail -f log/development.log
 ```
 
+### 動作確認
+
+```docker-compose up -d``` で ```bundle install``` , ```yarn install``` も走るので初回はアクセス出来るまで時間がかかる  
+
+```
+http://localhost:3000
+```
+
 ## Versions
 
 | package | version | url |
