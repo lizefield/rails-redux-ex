@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  rails-redux-ex:
+    build: .
+    image: rails-redux-ex:0.0.1
+    container_name: rails-redux-ex
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/local/src
+    networks:
+      - demonet
+    command: >
+      bash -c "source ~/.bashrc
+      && bundle install --path vendor/bundle
+      && yarn install
+      && bundle exec rails s -d -b 0.0.0.0 -p 3000
+      && npm run build"
+
+networks:
+  demonet:

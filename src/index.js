@@ -5,6 +5,8 @@ import { ConnectedRouter } from 'connected-react-router'
 import { history, store } from './config/store'
 import Routes from './config/routes'
 
+console.log('---> rails-redux-ex start')
+
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
