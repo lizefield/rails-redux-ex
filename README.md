@@ -1,8 +1,9 @@
 # README
 
-* 出来るだけ最新の安定版パッケージを利用(2018/10/08時点)
-* Redux(React)とAPIにフォーカスするためにDBは省略
+* 出来るだけ最新の安定版パッケージを利用(2018/10/08時点)
+* Redux(React)とAPIにフォーカスするためにDBは省略
 * Redux(React)の構成は出来るだけ公式(react,flux,redux)に沿った形で作成し、分割出来るところまで分割
+* 認証トークンとしてJWTをサンプル実装
 
 ## Versions
 
@@ -14,6 +15,10 @@
 | node | 8.12.0 | https://nodejs.org/ja/ |
 | npm | 6.4.1 | https://nodejs.org/ |
 | yarn | 1.10.1 | https://yarnpkg.com/ |
+
+| package | version | url |
+| :--- | :--- | :--- |
+| jwt | 2.1.0 | http://jwt.github.io/ruby-jwt/ |
 
 | package | version | url |
 | :--- | :--- | :--- |
@@ -53,7 +58,7 @@ docker-compose up -d
 docker-compose ps
 ```
 
-### ログ確認
+### ログ確認
 
 tail不要の場合は```-f```オプション省略
 
@@ -71,7 +76,7 @@ docker exec -it rails-redux-ex tail -f log/development.log
 
 ## 補足
 
-RailsはAPIモードで余計なものを省いて初期化
+RailsはAPIモードで余計なものを省いて初期化
 
 ```
 bundle exec rails new . -M -C -S -J -T -O --api
@@ -88,3 +93,5 @@ Presentational ComponentとContainer Componentsの分離
 https://redux.js.org/basics/usagewithreact  
 https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0  
 
+JWT  
+https://jwt.io  
