@@ -11,4 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
+  # No route match redirect
+  get '*path' => redirect('/')
+
 end

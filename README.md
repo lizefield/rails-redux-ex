@@ -77,7 +77,7 @@ RailsはAPIモードで余計なものを省いて初期化
 bundle exec rails new . -M -C -S -J -T -O --api
 ```
 
-react-router-reduxがdeprecatedのため、connected-react-routerの利用  
+react-router-reduxがdeprecatedのためconnected-react-routerの利用  
 https://github.com/reactjs/react-router-redux#readme  
 https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux  
 
