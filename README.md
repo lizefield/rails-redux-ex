@@ -28,7 +28,7 @@ docker-compose ps
 tail不要の場合は```-f```オプション省略
 
 ```
-docker-compose tail -f
+docker-compose logs -f
 ```
 
 ### コンテナ内コマンド実行

@@ -15,8 +15,8 @@ services:
       bash -c "source ~/.bashrc
       && bundle install --path vendor/bundle
       && yarn install
-      && bundle exec rails s -d -b 0.0.0.0 -p 3000
-      && npm run build"
+      && npm run build
+      && bundle exec rails s -d -b 0.0.0.0 -p 3000"
 
 networks:
   demonet:
